@@ -4,7 +4,7 @@
 
 ## 打开与运行
 
-- 编辑器：**Unity 2022.3.53f1c1**。
+- 编辑器：**Unity 6000.0.38f1**（2026-10-09由2022.3.53f1c1迁移；URP 17并启用Render Graph，Cinemachine 3，Input System 1.13）。
 - 场景：`Assets/_Game/Scenes/HarborLab.unity`。
 - 在Unity Hub打开本工程，等待导入与编译，打开HarborLab后点击Play。
 - 当前胶囊Captain保持静止，移动首版是学习任务。仓库、告示板和码头是灰盒占位，没有交互逻辑。
