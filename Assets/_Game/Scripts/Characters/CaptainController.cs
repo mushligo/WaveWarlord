@@ -40,9 +40,9 @@ namespace WaveWarlord
 
         private void Update()
         {
-            Vector2 input = inputReader.Move;
+            Vector2 moveInput = inputReader.Move;
 
-            if (isSprinting && input.sqrMagnitude < StopThresholdSqr)
+            if (isSprinting && moveInput.sqrMagnitude < StopThresholdSqr)
             {
                 stopTimer += Time.deltaTime;
                 if (stopTimer >= sprintExitDelay)
@@ -57,7 +57,7 @@ namespace WaveWarlord
 
             // 输入平面 (x, y) 映射到世界水平面 (x, 0, z)。
             // 只限制长度不超过 1，不强制归一化，以保留摇杆轻推时的小幅值。
-            Vector3 direction = Vector3.ClampMagnitude(new Vector3(input.x, 0f, input.y), 1f);
+            Vector3 direction = Vector3.ClampMagnitude(new Vector3(moveInput.x, 0f, moveInput.y), 1f);
             float speed = isSprinting ? sprintSpeed : moveSpeed;
 
             motor.SetMoveVelocity(direction * speed);
